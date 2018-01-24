@@ -1,14 +1,20 @@
+//ส่วนของการประกาศตัวแปร
+int myOut = D0;
+int myDelayTime = 2000; //ค่าของเวลาจะมีหน่วยเป็น มิลิวินาที
 
 
+//ส่วนของ Setup คือ ส่วนที่กำหนดค่าคงที่ ที่จะใช้ในโค้ด จะทำงานครั้งแรก ครั้งเดียว
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(16, OUTPUT);
-}
 
-// the loop function runs over and over again forever
+
+//  ส่วนที่กำหนด การส่ง Digital Out จากขาของ Node  
+  pinMode(myOut, OUTPUT);
+} // end of setup
+
+//ส่วนของ loop จะทำงาน วนไปมาตามสัญญาณนาฬิกา Digital Logic
 void loop() {
-  digitalWrite(16, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
-  digitalWrite(16, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+  digitalWrite(myOut, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(myDelayTime);                       // wait for a second
+  digitalWrite(myOut, LOW);    // turn the LED off by making the voltage LOW
+  delay(myDelayTime);                       // wait for a second
 }
